@@ -70,12 +70,11 @@ CameraPreview.takePicture({maxWidth:640, maxHeight:640});
 
 
 <b>setOnPictureTakenHandler(callback)</b><br/>
-<info>Register a callback function that receives the original picture and the image captured from the preview box.</info><br/>
+<info>Register a callback function that receives the image captured from the preview box.</info><br/>
 
 ```javascript
-CameraPreview.setOnPictureTakenHandler(function(result){
-  document.getElementById('originalPicture').src = result[0]; //originalPicturePath;
-  document.getElementById('previewPicture').src = result[1]; //previewPicturePath;
+CameraPreview.setOnPictureTakenHandler(function (picture) {
+  document.getElementById('picture').src = picture; // base64 picture;
 });
 ```
 
